@@ -1,0 +1,31 @@
+{
+  "name": "news-scrapper",
+  "version": "1.0.0",
+  "description": "An application storing news articles in Mongo DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UVXY/News-Scrapper.git"
+  },
+  "keywords": [
+    "mongo"
+  ],
+  "author": "Juan Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UVXY/News-Scrapper/issues"
+  },
+  "homepage": "https://github.com/UVXY/News-Scrapper#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "logger": "0.0.1",
+    "mongojs": "^2.6.0",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1"
+  }
+}
