@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-tetrahedral-55290";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds123919.mlab.com:23919/heroku_dnvj5k8j";
 
 mongoose.connect(MONGODB_URI);
 // mongoose.connect("mongodb://localhost/populatedb", {
