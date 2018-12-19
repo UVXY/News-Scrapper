@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>News Scrapper</title>
-    <style>
-      body { background-color: #F2F6D0 }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
+
+<head>
+  <meta charset="UTF-8">
+  <title>News Scrapper</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <style>
+    body { background-color: #F2F6D0 }
+      
       #articles {
         display: inline-block;
         overflow: auto;
@@ -35,22 +33,37 @@
         font-size: 18px;
       }
     </style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <form action="/submit" method="post">
-        <h1>Hi User!</h1>
-        <h2>Enter a Note!</h2>
-          <input type="text" name="title" placeholder="Title">
-          <textarea type="text" name="body">Write Note Here</textarea>
+</head>
+
+<body>
+  
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Welcome to Top News!</h1>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">Top News!</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="saved.html">Profile</a>
+            </div>
+          </div>
+        </nav>
+      <div class="card">
+          <button type="button" class="btn btn-outline-success" id="scrapeWeb">Scrape the front page!</button>
+          <div id="articles"></div>
+          <a href="/all">See Reddit's front page!</a>
+          <a href="/library">See your library!</a>
+          <a href="/populated">See your library, populated with books!</a>
+      </div>
     
-          <input type="submit">
-          <a href="/Article">See your saved articles!</a>
-          <a href="/user">See your profile!</a>
-          <a href="/populated">See your profile, populated with notes!</a>
-        </form>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>

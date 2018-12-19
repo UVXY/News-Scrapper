@@ -5,11 +5,23 @@ $.getJSON("/articles", function(data) {
     // Display the apropos information on the page
     $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
   }
+
+  var thisId = $(this).attr("data-id");
+
+  $.ajax({
+    method: "GET",
+    url: "/articles/" + thisId
+  }).then(function(data) {
+    console.log(data);
+    //title
+    $("#articles").append("<h2>" + data.title + "</h2>");
+
+  })
 });
 
 
 // Whenever someone clicks a p tag
-$(document).on("click", "p", function() {
+$(document).on("click", "#saveArticle", function() {
   // Empty the notes from the note section
   $("#notes").empty();
   // Save the id from the p tag
