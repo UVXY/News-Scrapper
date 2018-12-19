@@ -24,9 +24,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/populatedb", {
-    useNewUrlParser: true
-});
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-tetrahedral-55290";
+
+mongoose.connect(MONGODB_URI);
+// mongoose.connect("mongodb://localhost/populatedb", {
+//     useNewUrlParser: true
+// });
 
 // Routes
 
